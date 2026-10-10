@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity Playground | Learning Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Interactive Canvas -->
+  <canvas id="gravityCanvas"></canvas>
+
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="header">
+      <div class="badge">
+        <span class="pulse-dot"></span>
+        <span>Sandbox Mode &bull; Built by Keshav</span>
+      </div>
+      <h1 class="title">Antigravity <span class="gradient-text">Playground</span></h1>
+      <p class="subtitle">
+        A temporary test website built to explore the web pipeline: 
+        <strong>Code &rarr; Git &rarr; GitHub &rarr; Live Online</strong>
+      </p>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="grid">
+      <!-- Card 1: Live Clock & Greeting -->
+      <section class="card glass">
+        <div class="card-header">
+          <span class="icon">⏰</span>
+          <h3>Live System Clock</h3>
+        </div>
+        <div class="time-display" id="clock">00:00:00</div>
+        <div class="date-display" id="date">Loading date...</div>
+        <div class="greeting-badge" id="greeting">Welcome!</div>
+      </section>
+
+      <!-- Card 2: Interactive Antigravity Physics -->
+      <section class="card glass highlight-card">
+        <div class="card-header">
+          <span class="icon">✨</span>
+          <h3>Zero-Gravity Touch Canvas</h3>
+        </div>
+        <p class="card-desc">
+          Tap or drag anywhere on the screen! Particles float and repel your touch.
+        </p>
+        <div class="canvas-controls">
+          <button id="addParticlesBtn" class="btn btn-secondary">⚡ Spawn Particles</button>
+          <button id="invertGravityBtn" class="btn btn-secondary">🔄 Invert Drift</button>
+        </div>
+      </section>
+
+      <!-- Card 3: Interactive Notes (Saved to Browser Memory) -->
+      <section class="card glass full-width">
+        <div class="card-header">
+          <span class="icon">📝</span>
+          <h3>Quick Idea Scratchpad (Local Persistence)</h3>
+        </div>
+        <p class="card-desc">
+          Test client-side database storage (<code>localStorage</code>). Items stay saved even if you refresh!
+        </p>
+        
+        <form id="todoForm" class="todo-form">
+          <input 
+            type="text" 
+            id="todoInput" 
+            placeholder="Type an idea or test note..." 
+            autocomplete="off"
+            required
+          >
+          <button type="submit" class="btn btn-primary">Add Note</button>
+        </form>
+
+        <ul id="todoList" class="todo-list">
+          <!-- Loaded dynamically via app.js -->
+        </ul>
+      </section>
+
+      <!-- Card 4: How This Page Works (Educational Guide) -->
+      <section class="card glass full-width guide-card">
+        <div class="card-header">
+          <span class="icon">🎓</span>
+          <h3>How This Website Works Under The Hood</h3>
+        </div>
+        <div class="tech-stack-pills">
+          <span class="pill html-pill">HTML5 &bull; Structure</span>
+          <span class="pill css-pill">CSS3 &bull; Glassmorphism & Animations</span>
+          <span class="pill js-pill">JavaScript &bull; Canvas Physics & LocalStorage</span>
+          <span class="pill git-pill">Git &bull; Version Control</span>
+          <span class="pill live-pill">GitHub Pages &bull; Free Global Hosting</span>
+        </div>
+        <div class="steps-list">
+          <div class="step-item">
+            <span class="step-num">1</span>
+            <div>
+              <strong>Skeleton (index.html):</strong>
+              <p>Contains all the cards, buttons, and layout containers.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              <strong>Styling (style.css):</strong>
+              <p>Creates the sleek dark theme, blur effects, gradients, and mobile responsiveness.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              <strong>Interactivity (app.js):</strong>
+              <p>Powers the floating canvas animation, the live clock, and stores notes locally.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Created for learning &bull; Ready to be replaced anytime by your main project!</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
